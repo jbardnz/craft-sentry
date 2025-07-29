@@ -92,6 +92,7 @@ class SentryService extends Component
                 'environment' => \craft\helpers\App::env('ENVIRONMENT'),
                 'release' => $settings->release,
                 'http_proxy' => \Craft::$app->config->general->httpProxy,
+                'enable_logs' => $settings->enableLogs,                                
             ],
         ]);
         $this->trigger(self::EVENT_DEFINE_SENTRY_SDK_CONFIGURATION, $event);
